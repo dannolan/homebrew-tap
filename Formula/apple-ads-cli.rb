@@ -1,18 +1,21 @@
 class AppleAdsCli < Formula
-  desc "Agent-first Go CLI for Apple Ads"
+  desc "Agent-first CLI for Apple Ads"
   homepage "https://github.com/dannolan/apple-ads-cli"
-  url "https://github.com/dannolan/apple-ads-cli/archive/refs/tags/v0.1.3.tar.gz"
-  sha256 "3753584457aa9a0e287029cf0946b4703ea3c1aeccd6785063163760cff76c60"
+  version "0.1.4"
   license "MIT"
 
-  depends_on "go" => :build
+  depends_on :macos
+
+  if Hardware::CPU.arm?
+    url "https://github.com/dannolan/apple-ads-cli/releases/download/v0.1.4/ads_darwin_arm64.zip"
+    sha256 "75b84532b673687086768ca7ad29fc2ccec5eb01485a6830f45a8a38f8d94dbd"
+  else
+    url "https://github.com/dannolan/apple-ads-cli/releases/download/v0.1.4/ads_darwin_amd64.zip"
+    sha256 "b443369bf0cd53021bb1482bc9044d03545403601ed236ba118e8a21776a8e65"
+  end
 
   def install
-    ldflags = %W[
-      -s -w
-      -X github.com/dannolan/apple-ads-cli/internal/cli.Version=#{version}
-    ]
-    system "go", "build", *std_go_args(ldflags: ldflags, output: bin/"ads"), "./cmd/ads"
+    bin.install "ads"
   end
 
   test do
