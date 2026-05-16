@@ -1,8 +1,8 @@
 class AppleAdsCli < Formula
   desc "Agent-first Go CLI for Apple Ads"
   homepage "https://github.com/dannolan/apple-ads-cli"
-  url "https://github.com/dannolan/apple-ads-cli/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "a15ed88843b02b87c8aaf317b19e88fd3d37725f724d44851c0f2eacfdf253cc"
+  url "https://github.com/dannolan/apple-ads-cli/archive/refs/tags/v0.1.3.tar.gz"
+  sha256 "3753584457aa9a0e287029cf0946b4703ea3c1aeccd6785063163760cff76c60"
   license "MIT"
 
   depends_on "go" => :build
