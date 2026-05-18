@@ -5,21 +5,21 @@
 class GitWorktreeApfs < Formula
   desc "Create Git worktrees using APFS copy-on-write cloning"
   homepage "https://github.com/dannolan/git-worktree-apfs"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dannolan/git-worktree-apfs/releases/download/v0.1.1/git-worktree-apfs_Darwin_x86_64.tar.gz"
-      sha256 "04e306bbe3bbb07ff064c0c3d0c392588c0f43075ef76332de6811b7a397130b"
+      url "https://github.com/dannolan/git-worktree-apfs/releases/download/v0.1.2/git-worktree-apfs_Darwin_x86_64.tar.gz"
+      sha256 "b2abb897278d8bf13ea5e2d2604b6e93ebeb508d4049fb33893f939cfa113186"
 
       define_method(:install) do
         bin.install "git-worktree-apfs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dannolan/git-worktree-apfs/releases/download/v0.1.1/git-worktree-apfs_Darwin_arm64.tar.gz"
-      sha256 "3c3046faa284d19071d6f87bfd36ba7f35052a463e868cbc55322f3be13f9e2f"
+      url "https://github.com/dannolan/git-worktree-apfs/releases/download/v0.1.2/git-worktree-apfs_Darwin_arm64.tar.gz"
+      sha256 "35cc9fb366710c4939f7899cd173680895f0cbd1e8ce2355b90a04225767b225"
 
       define_method(:install) do
         bin.install "git-worktree-apfs"
@@ -29,15 +29,15 @@ class GitWorktreeApfs < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dannolan/git-worktree-apfs/releases/download/v0.1.1/git-worktree-apfs_Linux_x86_64.tar.gz"
-      sha256 "75e06fca8578d9ea4adeba0fd97fa995b772ae7e3b2213165a772fd8bf0d7149"
+      url "https://github.com/dannolan/git-worktree-apfs/releases/download/v0.1.2/git-worktree-apfs_Linux_x86_64.tar.gz"
+      sha256 "8bcd3bbd9acc30d565607cac366047d34ba7c9a57817092fbc6c3bf06a917c16"
       define_method(:install) do
         bin.install "git-worktree-apfs"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dannolan/git-worktree-apfs/releases/download/v0.1.1/git-worktree-apfs_Linux_arm64.tar.gz"
-      sha256 "955a5d4327f745fa03c6a1a11a2474b18a800ad8a58fee5dbf1a3b1428c4c7e8"
+      url "https://github.com/dannolan/git-worktree-apfs/releases/download/v0.1.2/git-worktree-apfs_Linux_arm64.tar.gz"
+      sha256 "14dc4426ad909b8017a19bdea11907203723e3cc4378145aa5f2225955856549"
       define_method(:install) do
         bin.install "git-worktree-apfs"
       end
