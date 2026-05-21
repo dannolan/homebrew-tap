@@ -1,26 +1,26 @@
 class Ga4Cli < Formula
   desc "Tiny, shippable Google Analytics 4 CLI"
   homepage "https://github.com/dannolan/ga4-cli"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/dannolan/ga4-cli/releases/download/v0.1.2/ga4_darwin_arm64.zip"
-      sha256 "19dd517c69b138607a704c2b6837ea7edbef350677491eec879c1a59398f6502"
+      url "https://github.com/dannolan/ga4-cli/releases/download/v0.1.3/ga4_darwin_arm64.zip"
+      sha256 "2950834dbe23cc37e0a447e5ff9f2cb226fcc644f2cf25032d74bca58c8fc90c"
     else
-      url "https://github.com/dannolan/ga4-cli/releases/download/v0.1.2/ga4_darwin_amd64.zip"
-      sha256 "0e87706117c297da20ca87081eee688f7b491a2f0f18ebb7f7f46f154224272b"
+      url "https://github.com/dannolan/ga4-cli/releases/download/v0.1.3/ga4_darwin_amd64.zip"
+      sha256 "fc530d4da601cb6a4bf5b1ca7d5373b34d005dc7670e97919806583009ee9edd"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/dannolan/ga4-cli/releases/download/v0.1.2/ga4_linux_arm64.zip"
-      sha256 "dc2244df2b8d024ee9bcb38d65b4f803a825ecd5d0b106d95f40a7955740c8a7"
+      url "https://github.com/dannolan/ga4-cli/releases/download/v0.1.3/ga4_linux_arm64.zip"
+      sha256 "93f6c9100b8adde53ead37aa2bc06573a0a4f5ce411b34a07dcb8fb13561e5f1"
     else
-      url "https://github.com/dannolan/ga4-cli/releases/download/v0.1.2/ga4_linux_amd64.zip"
-      sha256 "1be156bc63f547c0a6ed2c45414293c713c016a47ae0d139bc8f0adabac4ab1d"
+      url "https://github.com/dannolan/ga4-cli/releases/download/v0.1.3/ga4_linux_amd64.zip"
+      sha256 "eac3fab1b3b873b391a39d0ccbcb72a9bfbe18969e76f8bc10406550eb790429"
     end
   end
 
