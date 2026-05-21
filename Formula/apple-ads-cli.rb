@@ -1,17 +1,17 @@
 class AppleAdsCli < Formula
   desc "Agent-first CLI for Apple Ads"
   homepage "https://github.com/dannolan/apple-ads-cli"
-  version "0.1.8"
+  version "0.1.9"
   license "MIT"
 
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/dannolan/apple-ads-cli/releases/download/v0.1.8/ads_darwin_arm64.zip"
-    sha256 "b789304670fe8a06915f2499381daf82c44a98427033f47720bfd3f5b63f6098"
+    url "https://github.com/dannolan/apple-ads-cli/releases/download/v0.1.9/ads_darwin_arm64.zip"
+    sha256 "95f001511761ba065110cbf59d9e2206cbe821fdaf3888f5db7b30be55a40fdc"
   else
-    url "https://github.com/dannolan/apple-ads-cli/releases/download/v0.1.8/ads_darwin_amd64.zip"
-    sha256 "d1cdfc8ee61fa2d010c8310996f776453f509ab8b959b9c7df28af7f01de8109"
+    url "https://github.com/dannolan/apple-ads-cli/releases/download/v0.1.9/ads_darwin_amd64.zip"
+    sha256 "64ca8a59566a62ef82930963014295c654d54160419d93bc8e296d896b002f62"
   end
 
   def install
